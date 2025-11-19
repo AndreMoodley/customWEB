@@ -8,9 +8,14 @@ import config from "../config/config";
 function Letter() {
   const { emailData } = useEmailData();
   const navigate = useNavigate();
-  const [text, setText] = useState("");
+
+  // Pull what we need from config, including your custom message
+  const { buttons, api, customMessage } = config.letterPage;
+
+  // Set the text once and never change it (read-only)
+  const [text] = useState(customMessage);
+
   const [isLoading, setIsLoading] = useState(false);
-  const { buttons, api } = config.letterPage;
   const [placeholder, setPlaceholder] = useState(
     config.letterPage.placeholder.default
   );
@@ -31,6 +36,7 @@ function Letter() {
     );
   };
 
+  // You can still send this preset message via email if you want
   const sendEmail = async () => {
     if (text.trim()) {
       setIsLoading(true);
@@ -50,7 +56,6 @@ function Letter() {
         });
 
         if (response.ok) {
-          setText("");
           setPlaceholder(config.letterPage.placeholder.success);
           setTimeout(() => {
             navigate("/closing");
@@ -67,21 +72,7 @@ function Letter() {
       } finally {
         setIsLoading(false);
       }
-    } else {
-      setPlaceholder(config.letterPage.placeholder.emptyInput);
-      setTimeout(() => {
-        setPlaceholder(config.letterPage.placeholder.default);
-      }, 2000);
     }
-  };
-
-  const clearText = () => {
-    setText("");
-  };
-
-  const autoResize = (event) => {
-    event.target.style.height = "auto";
-    event.target.style.height = `${event.target.scrollHeight}px`;
   };
 
   return (
@@ -92,31 +83,14 @@ function Letter() {
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="content" id="content">
-        <textarea
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder={placeholder}
-          id="entry"
-          wrap="soft"
-          rows={4}
-          onInput={autoResize}
-          style={{ overflow: "hidden", resize: "none" }}
-          disabled={isLoading}
-        ></textarea>
-        <button onClick={clearText} className="clear-btn" disabled={isLoading}>
-          {buttons.clearText}
-        </button>
-      </div>
+<div className="content" id="content">
+  <div id="entry" className="letter-text">
+    {text}
+  </div>
+</div>
 
-      <button className="fixed" onClick={sendEmail} disabled={isLoading}>
-        {isLoading ? buttons.loading : buttons.sendMessage}
-      </button>
     </motion.div>
   );
 }
 
 export default Letter;
-
-//reference by Yahya Tarique on Codepen, thank you Yahya!
-//https://codepen.io/YahyaTarique/pen/RwBLogK

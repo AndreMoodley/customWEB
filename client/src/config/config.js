@@ -6,15 +6,15 @@ const config = {
     slides: [
       [
         "Hey my love",
-        "I made something for you for valentine's day 💖",
+        "I made something for you for 6 Months <3",
         // If you set `sentencePerSlide` to 2, the next text won't be visible
         "Surprise!",
       ],
       [
         "This is not a regular website",
-        "Coz I want you to do the work HAHAHA😈",
+        "since its for Gracie :)",
       ],
-      ["I want to know how well you know me by now", "So enjoy!"],
+      ["I want to show you js how much I love you.", "But here is a quiz to see if you really remember our special moments"],
       // You can add more slides or delete slides as needed
     ],
   },
@@ -35,38 +35,36 @@ const config = {
     questions: [
       {
         id: 1, // Unique ID for the question
-        title: "What is my favorite food?",
-        description: "I always mention this food",
-        correctAnswer: "duck", // Correct answer value (must match one of the options' `value`)
+        title: "who said I love you first?",
+        description: "(accidental or not)",
+        correctAnswer: "Gracie", // Correct answer value (must match one of the options' `value`)
         options: [
-          { value: "duck", label: "Fried Duck" },
-          { value: "dumplings", label: "Chinese Dumplings" },
-          { value: "indomie", label: "Indomie Noodles" },
-          { value: "bakso", label: "Bakso" },
+          { value: "Andre", label: "Andre" },
+          { value: "Gracie", label: "Gracie" }, 
         ],
       },
       {
         id: 2,
-        title: "What is my favorite drink?",
-        description: "I buy this almost everyday",
-        correctAnswer: "tea",
+        title: "Where was our first kiss?",
+        description: "Back of the car",
+        correctAnswer: "McLennon",
         options: [
-          { value: "latte", label: "Coffee Latte" },
-          { value: "cappucino", label: "Caramel Frappucino" },
-          { value: "tea", label: "Sweet Iced Tea" },
-          { value: "coke", label: "Coca Cola" },
+          { value: "Walmart", label: "Walmart" },
+          { value: "Pool", label: "Pool" },
+          { value: "Parking Lot", label: "Parking Lot" },
+          { value: "McLennon", label: "McLennon" },
         ],
       },
       {
         id: 3,
-        title: "When is my Birthday?",
+        title: "When did I get your IG?",
         description: "Don't make the same mistake twice:D",
-        correctAnswer: "sept-14",
+        correctAnswer: "March-14",
         options: [
-          { value: "sept-12", label: "September 12th" },
-          { value: "oct-16", label: "October 16th" },
-          { value: "august-14", label: "August 14th" },
-          { value: "sept-14", label: "September 14th" },
+          { value: "Feb-29", label: "Febuary 29th" },
+          { value: "March-26", label: "March 26th" },
+          { value: "April-1", label: "April 1st" },
+          { value: "March-14", label: "March 14th" },
         ],
       },
       // You can add more questions here
@@ -120,6 +118,47 @@ const config = {
 
   // ==== LETTER PAGE ====
   letterPage: {
+  // Custom message you want to display (your love letter)
+  customMessage: `To Mina More,
+
+Oh Gracie Where do i even start, Life with you has been so amazing and perfecta even with its ups and downs.
+
+But you know what, I wouldnt change a single thing! I am so Grateful and Thankful for everyday that I spend with you.
+
+When I wake up I Think of you, when i go to sleep i think of you, you are my everything and I am so glad i get to 
+
+spend the rest of my life with you. its one thing to say I am obsessed and another to actualy be obsessed and I am happily 
+
+Obsessed, from the mornings when the first thing i do is reach to see if you text me or to text you good morning, to our 
+
+daily habitual need to see eachother, then to the nights when we yap before bed, my life is filled with Gracie and I LOVE IT!!!
+
+I can barley remember life before Gracie and to me it seems like i just got spawned in with you in my life and this weird thing
+
+we call life only truly started 6 months ago, it seems like its been a enternity but at the same time it feels like we have barley
+
+started our story, to me it is so soreal that we have been tg all throughout 2025 into 2026 and whats even more crazy is how we met 
+
+met at the perfect moment so we get to jump straight into our lives and grow tg, eat tg, live tg, sleep tg, and experience all
+
+this world has to offer TOGETHER. I genuinely cannot be more thankful to be yours and be lucky enough to have you in my life <3
+
+I Truly Believe we were put on this earth to meet eachother and be with eachother because you are so perfect, and kawaiiiii.
+
+But through thick and thin I am here bby and whenever it seems like i dont love you I hope you will look to this, your ring or now
+
+wrist? to see just how much I LOVEEEE YOUUUUUUUU. MEOOOWWW MEEOOOWWWWWW
+
+SO THANK YOU SO MUCH FOR BEING THE BEST WIFEYYYY EVERRRRRR
+
+THANKK YOUUUU SO MUCHHH FOR BEING MINEEEE
+
+I AM THE LUCKIEST GUY IN THE ENTIRE GALAXYYYY
+
+HAPPPPYYYYYY 6 MONTHHSSSSS BBBYYYYYYY
+
+Love,
+Andre ❤️`,
     // Placeholder text for the letter input
     placeholder: {
       default: `Now, I want you to write me a letter :) Once you click "Send Message" I'll be able to see it hehe`,

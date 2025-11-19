@@ -34,18 +34,18 @@
   padding: 20px;
 }
 
-.letter-page textarea {
+/* replace the textarea block with this */
+.letter-page .letter-text {
   width: 100%;
-  background-color: black;
   font-family: cursive;
   font-weight: bold;
   background: transparent;
   border: 0;
   margin-top: 0.5rem;
   line-height: inherit;
-  /* color: var(--text-color); */
-  resize: none;
+  white-space: pre-wrap; /* keep your line breaks */
 }
+
 
 .letter-page textarea:focus {
   outline: none;

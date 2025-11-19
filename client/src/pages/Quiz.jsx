@@ -43,7 +43,7 @@ function Quiz() {
       score: score,
       totalQuestions: questions.length,
     }));
-    navigate("/drawing");
+    navigate("/letter");
   };
   const progress = (currentQuestion / questions.length) * 100;
   return (
